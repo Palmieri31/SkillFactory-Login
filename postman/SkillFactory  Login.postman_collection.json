@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "d9ebc153-c6c0-43be-9317-3fcd80682261",
+		"name": "SkillFactory  Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/ login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"password\"\r\n}"
+				},
+				"url": {
+					"raw": "{{Ruta}}/api/login",
+					"host": [
+						"{{Ruta}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/greeting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjgxNDY1MTEsImV4cCI6MTYyODIzMjkxMX0.q3D-eC3xAjLnvZaqWIkLxGQnWthm_aoKvniWtHF2GJA"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{Ruta}}/api/greeting",
+					"host": [
+						"{{Ruta}}"
+					],
+					"path": [
+						"api",
+						"greeting"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
